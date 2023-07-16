@@ -14,10 +14,15 @@
 
   <body>
     <main>
+      <h1>Email Test</h1>
       <form>
         <div>
           <label for="name">Full Name:</label>
           <input id="name" type="text" name="name"/>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input id="email" type="text" email="email"/>
         </div>
         <div>
           <label for="location">Zipcode:</label>
@@ -30,6 +35,20 @@
             required
             />
         </div>
+
+        <h2>Priority</h2>
+        <div>
+          <lable for="High">High:</lable>
+          <input id="High" name="High" type="radio" value="High"/>
+        </div>
+        <div>
+          <lable for="Medium">Medium:</lable>
+          <input id="Medium" name="Medium" type="radio" value="Medium"/>
+        </div>
+        <div>
+          <lable for="Low">Low:</lable>
+          <input id="Low" name="Low" type="radio" value="Low"/>
+        </div>
         <div>
           <label for="form-message">Your message:</label>
           <textarea
@@ -40,6 +59,7 @@
             maxlength="200"
             ></textarea>
         </div>
+        <p></p>
         <button type="submit">Submit</button>
         <button type="reset">Reset</button>
       </form>
