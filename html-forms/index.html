@@ -13,6 +13,36 @@
   </head>
 
   <body>
-    <main></main>
+    <main>
+      <form>
+        <div>
+          <label for="name">Full Name:</label>
+          <input id="name" type="text" name="name"/>
+        </div>
+        <div>
+          <label for="location">Zipcode:</label>
+          <input
+            id="location"
+            type="text"
+            name="zipcode"
+            autofocus="on"
+            maxlength="5"
+            required
+            />
+        </div>
+        <div>
+          <label for="form-message">Your message:</label>
+          <textarea
+            id="form-message"
+            name="message"
+            autofocus="on"
+            required
+            maxlength="200"
+            ></textarea>
+        </div>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+    </main>
   </body>
 </html>
