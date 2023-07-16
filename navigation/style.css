@@ -1,3 +1,81 @@
 body {
   margin: 0;
 }
+/* Style the header */
+header {
+  /* Sets background color to black */
+  background-color: black;
+  /* Adds 40 pixels of space under the header so that the main content isn't so close to the navigation. */
+  margin-bottom: 40px;
+}
+/* Style the title */
+header h1 {
+  /* Sets text color to white. */ 
+  color: #fff;
+  /* Centers the text. */
+  text-align: center;
+  /* Removes the default margin and spacing around the h1 element. */
+  margin: 0;
+  /* Pushes the text down 20 pixels from the top of the page. */
+  padding-top: 20px;
+}
+/* Style the container for navigation */
+header nav {
+  /* Changes the display property from its default to flex. */
+  display: flex;
+  /* Centers an element defined as a display: flex. */
+  justify-content: center;
+}
+/* Style the unordered list. */
+header nav ul {
+  /* Changes the display property from its default to 'flex'. */
+  display: flex;
+  /* You want the navigation to display in a single row. This is the default value for `display: flex`, so you don't need to define its `flex-direction` in this case. */
+  /* Removes the default padding to the left of the unordered list. */
+  padding-left: 0;
+  /* Removes the bullet points from the list items within the unordered list. */
+  list-style: none;
+}
+/* Style the anchor tabs of the list items */
+header nav ul li a {
+  /* The link color is white. */
+  color: #fff;
+  /* Removes the underline from the link. */
+  text-decoration: none;
+  /* Applies 20 pixels of margin to the right of each link creating a visual gap between the navigation links. */
+  margin: 0 20px 0 0;
+}
+/* Style the last item's anchor. */
+header nav ul li:last-child a {
+  /* Removes the margin to the right of the last anchor tag so that the nav appears centered. */
+  margin-right: 0;
+}
+/* Add media query to tell the browser how to change the header, title, and navigation when viewed on desktop */
+/* When a browser is larger than 600 pixels, apply these rules. */
+@media all and (min-width: 600px;) {
+  header {
+    /* Changes the default setting from 'block' to 'flex'. */
+    display: flex;
+    /* Pushes the items (the title and nav) to the far side of the browser with the space between them. */
+    justify-content: space-between;
+    /* Adds 0 pixels padding top and bottom, and 30 pixels padding left and right. */
+    padding: 0 30px;
+  }
+
+  header h1 {
+    /* Sets 14 pixels of margin above and below the 'h1' and sets 0 pixels of margin to the left and right. */
+    margin: 14px;
+    /* Removes or sets 0 pixels of padding above the h1. */
+    padding-top: 0;
+  }
+
+  header nav {
+    /* Pushes the navigation container down by 8 pixels to make it present a little better visually within the space. */
+    margin-top: 8px;
+  }
+  /* Users cannot hover on mobile devices, so that is why you implement this behavior only for larger screens. */
+  header nav ul li a:hover {
+    /* Targerts the change when a user holds the pointer over the anchor tag (link) within the list items within the unordered list that is whithin the navigation that is within the header. */
+    color: #bdbdbd;
+  }
+}
